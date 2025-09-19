@@ -157,13 +157,12 @@ def main():
     # Get PORT from Render environment
     PORT = int(os.environ.get("PORT", 8443))
 
-    # Run webhook
-    # Replace 'your-render-service.onrender.com' with your actual Render URL
+    # Run webhook with your actual Render URL
     app.run_webhook(
         listen="0.0.0.0",
         port=PORT,
         url_path=BOT_TOKEN,
-        webhook_url=f"https://your-render-service.onrender.com/{BOT_TOKEN}"
+        webhook_url=f"https://onboarding-bot-fo79.onrender.com/{BOT_TOKEN}"
     )
 
 if __name__ == "__main__":
