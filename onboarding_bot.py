@@ -8,7 +8,7 @@ from telegram.ext import Application, CommandHandler, CallbackQueryHandler, Cont
 # CONFIG (from environment variables)
 # -----------------------------
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
-ADMIN_ID = int(os.environ.get("ADMIN_ID", 0))  # Make sure this is your Telegram ID as a number
+ADMIN_ID = int(os.environ.get("ADMIN_ID", 0))
 
 if not BOT_TOKEN or not ADMIN_ID:
     raise Exception("BOT_TOKEN or ADMIN_ID environment variable not set!")
