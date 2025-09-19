@@ -23,7 +23,7 @@ user_choices = {}     # { user_id: broker_choice }
 steps = [
     "✅ *Step 1: Choose Your Broker*\n\nPick one of the brokers below to sign up and create your account.",
     "✅ *Step 2: Open a Live Account*\n\nOnce logged in, go to *Open Live Account* and set your leverage to *200X*.",
-    "✅ *Step 3: Make Your Deposit*\n\n1. Fund your account with a minimum of *$100* to get started.\n2. Recommended: at least $1000 to see decent profit.",
+    "✅ *Step 3: Make Your Deposit*\n\n1. Fund your account with a minimum of *$1000* to get started.\n2. Recommended: at least $1000 to see decent profit.",
     "✅ *Step 4: DM Me on Telegram*\n\nSend me a message 👉 @AbelMelendez with a screenshot once you’re done.\nI’ll add you into the *Free Trading Signals Group* 🚀"
 ]
 
