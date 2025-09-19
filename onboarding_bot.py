@@ -142,14 +142,29 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await send_welcome(update, context)
 
 # -----------------------------
-# MAIN
+# MAIN (Webhook for Render)
 # -----------------------------
 def main():
+    from telegram.ext import Application, CommandHandler, CallbackQueryHandler
+
     app = Application.builder().token(BOT_TOKEN).build()
+
+    # Add handlers
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("restart", restart))
     app.add_handler(CallbackQueryHandler(button))
-    app.run_polling()
+
+    # Get PORT from Render environment
+    PORT = int(os.environ.get("PORT", 8443))
+
+    # Run webhook
+    # Replace 'your-render-service.onrender.com' with your actual Render URL
+    app.run_webhook(
+        listen="0.0.0.0",
+        port=PORT,
+        url_path=BOT_TOKEN,
+        webhook_url=f"https://your-render-service.onrender.com/{BOT_TOKEN}"
+    )
 
 if __name__ == "__main__":
     main()
